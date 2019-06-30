@@ -1,0 +1,40 @@
+{{#if sesion}}
+{{>headerCoordinador}}
+<br>
+<h4 class="col-md-6">Crear curso de educación continua</h4>
+<br>
+<form action="/creacionCurso" method="post">
+
+	<div class="row col-md-12">
+		<div class="col">
+			<label>Nombre del curso:</label>
+		    <input class="form-control" type="text" name="nombre" placeholder="Nombre curso" required>
+		</div>
+		<div class="col">
+			<label>Descripción del curso:</label>
+            <textarea class="form-control" type="text" name="descripcion" placeholder="Descripción" required></textarea>
+		</div>
+	</div><br>
+    <div class="row col-md-12">
+        <div class="col">
+			<label>Ingresa el valor del curso:</label>
+            <input class="form-control" type="number" name="valor" placeholder="Valor" required>
+		</div>
+        <div class="col">
+            <label>Modalidad:</label> <br>
+            <select name="modalidad">
+                <option value="virtual">Virtual</option>
+                <option value="presencial">Presencial</option>
+            </select>
+        </div>
+        <div class="col">
+            <label>Intensidad</label>
+            <input class="form-control" type="number" name="intensidad" placeholder="Intensidad horaria">
+        </div>
+    </div> <br>
+	<div class="col">
+		<button type="submit" class="btn btn-primary">Enviar</button>
+	</div>
+</form>
+{{>footer}}
+{{/if}}

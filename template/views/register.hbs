@@ -1,0 +1,89 @@
+{{>header}}
+<br>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            {{{respuestaAlertRegister respuestaRegister}}}
+            <div class="card">
+                <div class="card-header">Registrarse</div>
+                <div class="card-body">
+
+                    <form method="post" action="/registrarUsuario">
+
+                        <div class="form-group">
+                            <label for="name" class="cols-sm-2 control-label">Ingresa tu documento de identidad</label>
+                            <div class="cols-sm-10">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                                    <input type="number" class="form-control" name="documento" id="name" placeholder="Documento de Identidad" required/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="cols-sm-2 control-label">Ingresa tu nombre</label>
+                            <div class="cols-sm-10">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+                                    <input type="text" class="form-control" name="nombre" placeholder="Nombres y Apellidos" required/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="cols-sm-2 control-label">Ingresa tu nombre de usuario</label>
+                            <div class="cols-sm-10">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+                                    <input type="text" class="form-control" name="usuario" placeholder="Username" required/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="cols-sm-2 control-label">Ingresa tu contraseña</label>
+                            <div class="cols-sm-10">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+                                    <input type="password" class="form-control" name="password" placeholder="Contraseña" required/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="username" class="cols-sm-2 control-label">Ingresa tu correo electrónico</label>
+                            <div class="cols-sm-10">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+                                    <input type="email" class="form-control" name="correo" placeholder="ejemplo@ejemplo.com" required/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="password" class="cols-sm-2 control-label">Ingresa tu número de teléfono</label>
+                            <div class="cols-sm-10">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                                    <input type="number" class="form-control" name="telefono" placeholder="Teléfono" required/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="password" class="cols-sm-2 control-label">Selecciona tu rol</label>
+                            <div class="cols-sm-10">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                                    <select name="tipo">
+                                        <option value="coordinador">Coordinador</option>
+                                        <option value="aspirante">Aspirante</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group ">
+                            <button type="submit" class="btn btn-primary btn-lg btn-block login-button">Registrarse</button>
+                        </div>
+                    </form>
+                    <a href="/" class="btn btn-secondary">Volver</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{>footer}}

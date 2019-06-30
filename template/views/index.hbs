@@ -1,0 +1,50 @@
+{{>header}}
+    <div class="container login-container">
+        <div class="row">
+            <div class="col-md-6 login-form-1">
+                <h3>Coordinador</h3>
+                <div id="respuesta" class="order-md-1">
+                    {{{respuestaAlertCoord respuestaCoord}}}
+                </div>
+                <form action="/coordinador" method="post" novalidate>
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="username" placeholder="Usuario *" required/>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" name="password" placeholder="Contraseña *" required/>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btnSubmit">Ingresar</button>
+                    </div>
+                    <div class="form-group">
+                        <a href="/register" style="color:white;">Registrarse</a>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-6 login-form-2">
+                <div class="login-logo">
+                    <img src="img/jarvis.png" class="image-fluid" alt="Logo"/>
+                </div>
+                <h3>Aspirante o Docente</h3>
+                <div id="respuesta" class="order-md-1">
+                    {{{respuestaAlertAsp respuestaAsp}}}
+                </div>
+                <form action="/aspirante" method="post" novalidate>
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="username" placeholder="Usuario *" required/>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" name="password" placeholder="Contraseña *" required/>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btnSubmit">Ingresar</button>
+                    </div>
+                    <div class="form-group">
+                        <a href="/register" style="color:white;">Registrarse</a>
+                    </div>
+                </form>
+                <a href="/interesado" class="btn btn-primary btn-block">Ingresar como interesado.</a>
+            </div>
+        </div>
+    </div>
+{{>footer}}

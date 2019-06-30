@@ -1,0 +1,16 @@
+{{#if sesion}}
+{{>headerAspirante}}
+<br>
+    <form action="/aspirante/verCursos" method="POST">
+        <div class="row col-md-4">
+            <div class="col">
+                <label>Ingresa tu número de documento:</label>
+                <input class="form-control" type="number" name="documento" placeholder="Documento" required>
+            </div>
+        </div> <br>
+        <div class="col">
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </div>
+    </form>
+{{>footer}}
+{{/if}}
