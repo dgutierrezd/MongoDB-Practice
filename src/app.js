@@ -35,7 +35,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 
 app.use(require('./Routes/index'))
 
-var urlMongoDB = 'mongodb://heroku_mlf7r4z6:uHx7QWbpevCvGpC@ds345597.mlab.com:45597/heroku_mlf7r4z6'
+var urlMongoDB = process.env.MONGODB_URI || 'mongodb://localhost:27017/practica'
 
 mongoose.connect(urlMongoDB, {useNewUrlParser: true}, (err, res) => {
 	if(err)
